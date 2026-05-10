@@ -110,7 +110,7 @@ Target mapping:
 | Containerization | Docker |
 | Cloud Services | AWS S3, AWS ECR, AWS EC2 |
 | CI/CD | GitHub Actions |
-| Operating System | Windows (Development), Ubuntu (EC2) |
+| Operating System | Windows Development, Ubuntu EC2 |
 
 ---
 
@@ -459,6 +459,14 @@ http://13.51.161.182:8501
 
 ---
 
+## Live Demo
+
+The application was deployed on AWS EC2 using Docker, AWS ECR, and GitHub Actions CI/CD.
+
+Live demo may be unavailable when the EC2 instance is stopped to reduce cloud costs.
+
+---
+
 ## GitHub Actions CI/CD Pipeline
 
 This project includes a complete Docker-based CI/CD pipeline using GitHub Actions, AWS ECR, and AWS EC2.
@@ -630,19 +638,13 @@ docker run -d --name gmaa-dashboard-container -p 8501:8501 gmaa-dashboard
 
 ### FastAPI Swagger UI
 
-Add FastAPI Swagger UI screenshot here.
+![FastAPI Swagger](screenshots/fastapi_swagger.png)
+
+---
 
 ### Streamlit Dashboard
 
-Add Streamlit dashboard screenshot here.
-
-### SHAP Explainability
-
-Add SHAP visualization screenshot here.
-
-### LIME Explainability
-
-Add LIME explanation screenshot here.
+![Streamlit Dashboard](screenshots/streamlit_dashboard.png)
 
 ---
 
@@ -668,10 +670,3 @@ Pratham Chavan
 ## License
 
 This project is for educational and portfolio purposes.
-
-
-## Live Demo
-
-The application was deployed on AWS EC2 using Docker, AWS ECR, and GitHub Actions CI/CD.
-
-Live demo may be unavailable when the EC2 instance is stopped to reduce cloud costs.

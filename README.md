@@ -668,3 +668,10 @@ Pratham Chavan
 ## License
 
 This project is for educational and portfolio purposes.
+
+
+## Live Demo
+
+The application was deployed on AWS EC2 using Docker, AWS ECR, and GitHub Actions CI/CD.
+
+Live demo may be unavailable when the EC2 instance is stopped to reduce cloud costs.

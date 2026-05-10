@@ -8,3 +8,6 @@ class DataIngestionConfig:
     test_path: str
     raw_data_path: str
     
+@dataclass
+class PredictionPipelineConfig:
+    model_path: str

@@ -49,19 +49,19 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
+            aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | sudo docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
 
-            docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/gmaa-api:latest
-            docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/gmaa-dashboard:latest
+            sudo docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/gmaa-api:latest
+            sudo docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/gmaa-dashboard:latest
 
-            docker stop gmaa-api-container || true
-            docker stop gmaa-dashboard-container || true
+            sudo docker stop gmaa-api-container || true
+            sudo docker stop gmaa-dashboard-container || true
 
-            docker rm gmaa-api-container || true
-            docker rm gmaa-dashboard-container || true
+            sudo docker rm gmaa-api-container || true
+            sudo docker rm gmaa-dashboard-container || true
 
-            docker run -d --name gmaa-api-container -p 8000:8000 ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/gmaa-api:latest
+            sudo docker run -d --name gmaa-api-container -p 8000:8000 ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/gmaa-api:latest
 
-            docker run -d --name gmaa-dashboard-container -p 8501:8501 ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/gmaa-dashboard:latest
+            sudo docker run -d --name gmaa-dashboard-container -p 8501:8501 ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/gmaa-dashboard:latest
 
-            docker ps
+            sudo docker ps

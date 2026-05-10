@@ -50,7 +50,7 @@ class CustomData:
 class PredictionPipeline:
     def __init__(self):
         self.config = PredictionPipelineConfig(
-            model_path="artifacts/model_trainer/model_20260429_130952.pkl"
+            model_path="artifacts/model_trainer/model.pkl"
         )
 
     def load_model(self):

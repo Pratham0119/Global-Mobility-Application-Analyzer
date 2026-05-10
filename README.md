@@ -638,13 +638,13 @@ docker run -d --name gmaa-dashboard-container -p 8501:8501 gmaa-dashboard
 
 ### FastAPI Swagger UI
 
-![FastAPI Swagger](screenshots/fastapi_swagger.png)
+![FastAPI Swagger](Screenshots/fastapi_swagger.png)
 
 ---
 
 ### Streamlit Dashboard
 
-![Streamlit Dashboard](screenshots/streamlit_dashboard.png)
+![Streamlit Dashboard](Screenshots/streamlit_dashboard.png)
 
 ---
 
